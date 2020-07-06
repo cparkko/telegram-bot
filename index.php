@@ -128,8 +128,8 @@
 	        'resize_keyboard' => true)));
 	    } else if ($text === "Hello" || $text === "Hi") {
 	      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Nice to meet you'));
-	    } else if (stripos($text, "test") === 0) {
-	    	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'OK!'));
+	    } else if (mb_stripos($text, "тест") => 0) {
+	    	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Test OK!'));
 	    } else if (strpos($text, "/stop") === 0) {
 	      // stop now
 	    } else {
