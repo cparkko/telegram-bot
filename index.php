@@ -128,7 +128,7 @@
 	        'resize_keyboard' => true)));
 	    } else if ($text === "Hello" || $text === "Hi") {
 	      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Nice to meet you'));
-	    } else if (stripos($text, "Десятина") === 0 || stripos($text, "Десятина") > 0) {
+	    } else if (mb_stripos($text, "Десятина") === 0 || mb_stripos($text, "Десятина") > 0) {
 	    	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Ланистеры всегда платят долги'));
 	    } else if (strpos($text, "/stop") === 0) {
 	      // stop now
