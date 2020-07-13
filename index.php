@@ -143,7 +143,7 @@
 
 	define('WEBHOOK_URL', 'https://my-telegram-test-app.herokuapp.com/');
 
-// echo php_sapi_name();
+echo php_sapi_name();
 
 	var_dump($_GET);
 	  // if run from console, set or delete webhook
