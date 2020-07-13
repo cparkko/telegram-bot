@@ -133,12 +133,12 @@
 	    		'inline_keyboard' => [
 	    			[['text' => 'Google', 'url' => 'https://google.ru', 'callback_data' => 'Google']],
 	    			[['text' => 'Yandex', 'url' => 'https://yandex.ru', 'callback_data' => 'Yandex']],
-	    			[['text' => 'Test callback \ud83d\ude02', 'callback_data' => 'Callback OK!']],
+	    			[['text' => 'Test callback ' . hex2bin('F09F9882'), 'callback_data' => 'Callback OK!']],
 	    		]
 	    	]
 	    	));
 	    } else if (stripos($text, 'smile') === 0) {
-	    	apiRequest('sendMessage', ['chat_id' => $chat_id, 'text' => '\ud83d\ude02']);
+	    	apiRequest('sendMessage', ['chat_id' => $chat_id, 'text' => hex2bin('F09F9882')]);
 	    } else if (strpos($text, "/stop") === 0) {
 	      // stop now
 	    } else {
