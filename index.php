@@ -145,7 +145,7 @@
 
 // echo php_sapi_name();
 
-	
+	var_dump($_GET);
 	  // if run from console, set or delete webhook
 	if (!empty($_GET['command']) && $_GET['command'] == 'start') {
 	  apiRequest('setWebhook', array('url' => isset($argv[1]) && $argv[1] == 'delete' ? '' : WEBHOOK_URL));
