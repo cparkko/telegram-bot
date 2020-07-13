@@ -133,6 +133,7 @@
 	    		'inline_keyboard' => [
 	    			[['text' => 'Google', 'url' => 'https://google.ru', 'callback_data' => 'Google']],
 	    			[['text' => 'Yandex', 'url' => 'https://yandex.ru', 'callback_data' => 'Yandex']],
+	    			[['text' => 'Test callback', 'callback_data' => 'Callback OK!']],
 	    		]
 	    	]
 	    	));
