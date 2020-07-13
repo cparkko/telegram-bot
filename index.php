@@ -168,9 +168,12 @@
 	  exit;
 	}
 
-	error_log($content);
-
 	if (isset($update["message"])) {
+		error_log($update['message']);
+
+		if (isset($update['message']['data'])) {
+			error_log($update['message']['data']);
+		}
 	  processMessage($update["message"]);
 	}
 ?>
