@@ -167,6 +167,8 @@
 	  exit;
 	}
 
+	error_log($content);
+
 	if (isset($update["message"])) {
 	  processMessage($update["message"]);
 	}
