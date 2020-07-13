@@ -131,8 +131,8 @@
 	    } else if (stripos($text, "test") === 0) {
 	    	apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'Test OK!', 'reply_markup' => [
 	    		'inline_keyboard' => [
-	    			['text' => 'Google', 'url' => 'https://google.ru', 'callback_data' => 'Google pressed'],
-	    			['text' => 'Yandex', 'url' => 'https://yandex.ru', 'callback_data' => 'Yandex pressed'],
+	    			[['text' => 'Google', 'url' => 'https://google.ru', 'callback_data' => 'Google']],
+	    			[['text' => 'Yandex', 'url' => 'https://yandex.ru', 'callback_data' => 'Yandex']],
 	    		]
 	    	]
 	    	));
