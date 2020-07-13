@@ -129,11 +129,12 @@
 	    } else if ($text === "Hello" || $text === "Hi") {
 	      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Nice to meet you'));
 	    } else if (stripos($text, "test") === 0) {
-	    	apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'Test OK!',
+	    	apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'Test OK!', 'inline_markup' => [
 	    		'inline_keyboard' => [
 	    			['text' => 'Google', 'url' => 'https://google.ru', 'callback_data' => 'Google pressed'],
 	    			['text' => 'Yandex', 'url' => 'https://yandex.ru', 'callback_data' => 'Yandex pressed'],
 	    		]
+	    	]
 	    	));
 	    } else if (strpos($text, "/stop") === 0) {
 	      // stop now
