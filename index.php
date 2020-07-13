@@ -128,7 +128,7 @@
 	        'resize_keyboard' => true)));
 	    } else if ($text === "Hello" || $text === "Hi") {
 	      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Nice to meet you'));
-	    } else if (stripos($text, "test") => 0) {
+	    } else if (mb_stripos($text, "тест") == 0) {
 	    	apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'Test OK!'));
 	    } else if (strpos($text, "/stop") === 0) {
 	      // stop now
@@ -143,9 +143,8 @@
 
 	define('WEBHOOK_URL', 'https://my-telegram-test-app.herokuapp.com/');
 
-echo php_sapi_name();
+// echo php_sapi_name();
 
-	var_dump($_GET);
 	  // if run from console, set or delete webhook
 	if (!empty($_GET['command']) && $_GET['command'] == 'start') {
 	  apiRequest('setWebhook', array('url' => isset($argv[1]) && $argv[1] == 'delete' ? '' : WEBHOOK_URL));
