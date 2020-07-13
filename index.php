@@ -171,9 +171,10 @@
 	if (isset($update["message"])) {
 		error_log(json_encode($update['message']));
 
-		if (isset($update['message']['data'])) {
-			error_log(json_encode($update['message']['data']));
-		}
-	  processMessage($update["message"]);
+	    processMessage($update["message"]);
+	}
+
+	if (isset($update['callback_query'])) {
+		error_log(json_encode($update['callback_query']['data']));
 	}
 ?>
