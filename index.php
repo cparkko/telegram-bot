@@ -169,10 +169,10 @@
 	}
 
 	if (isset($update["message"])) {
-		error_log($update['message']);
+		error_log(json_encode($update['message']));
 
 		if (isset($update['message']['data'])) {
-			error_log($update['message']['data']);
+			error_log(json_encode($update['message']['data']));
 		}
 	  processMessage($update["message"]);
 	}
