@@ -147,7 +147,9 @@
 
 	
 	  // if run from console, set or delete webhook
-	  // apiRequest('setWebhook', array('url' => isset($argv[1]) && $argv[1] == 'delete' ? '' : WEBHOOK_URL));
+	if (!empty($_GET['command']) && $_GET['command'] == 'start') {
+	  apiRequest('setWebhook', array('url' => isset($argv[1]) && $argv[1] == 'delete' ? '' : WEBHOOK_URL));
+	}
 	
 
 
